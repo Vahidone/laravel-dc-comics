@@ -18,10 +18,13 @@
                 <h5 class="card-title">{{ $comic->title }}</h5>
                 <p class="card-title">{{ $comic->description }}</p>
                 <p class="card-title">{{ $comic->sale_date }}</p>
-                <p class="card-text">{{ $comic->artisti }}</p>
+                {{-- @foreach ($comic['artists'] as $artist)
+                    <li>{{ $artist }}</li>
+                @endforeach --}}
+
                 <p class="card-text">{{ $comic->price }}</p>
                 <p class="card-text">{{ $comic->type }}</p>
-                <p class="card-text">{{ $comic->type }}</p>
+
 
             </div>
         </div>
@@ -29,7 +32,7 @@
 
     </div>
 
-    <a href="{{ route('home')}}" class="btn btn-danger mt-5">Torna in homepage</a>
+    <a href="{{ route('comics.index')}}" class="btn btn-danger mt-5">Indietro</a>
 
 
 </div>
