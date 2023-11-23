@@ -3,7 +3,7 @@
 
 @section('content')
 
-<h1 class="text-center text-primary fw-bold "></h1>
+<h1 class="text-center text-warning fw-bold fs-1 mb-5">Comics List</h1>
 
         <div class="div d-flex flex-wrap">
 
@@ -15,7 +15,7 @@
                     <h5 class="card-title">{{ $comic->title }}</h5>
                     <p class="card-text">{{ $comic->artisti }}</p>
                     <p class="card-text">{{ $comic->price }}</p>
-                    <a href="#" class="btn btn-primary">Details</a>
+                    <a href="{{ route('details', ['id' => $comic->id])}}" class="btn btn-primary">Details</a>
                     </div>
                 </div>
 

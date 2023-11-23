@@ -14,4 +14,14 @@ class PageController extends Controller
     public function about_us() {
         return view('about_us');
     }
+
+    public function details($id) {
+
+        $comic = Comic::find($id);
+
+        return view('details', compact('comic'));
+    }
+
+
+
 }
