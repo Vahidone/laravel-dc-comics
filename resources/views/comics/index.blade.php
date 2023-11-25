@@ -1,16 +1,19 @@
 @extends('layouts.main')
 
 @section('content')
-@include('comics.test-functions')
+
+
+@include('comics.functions')
 
 <div class="container my-3">
     <h1 id="index-title">I nostri fumetti</h1>
 
-    @if(Session::has('success'))
+    @if(Session('deleted'))
 
-    <div id="delete_msg" class="alert alert-success" role="alert">
-        {{Session::get('success')}}
-    </div>
+        <div id="delete-message" class="alert alert-success" role="alert">
+            {{Session('deleted')}}
+        </div>
+
     @endif
 
 
