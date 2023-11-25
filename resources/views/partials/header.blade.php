@@ -14,8 +14,9 @@
                 <a href="{{ route('comics.index') }}">Lista dei fumetti</a>
 
             </li>
+
             <li class="nav-item">
-                <a href="{{ route('comics.create') }}">Crea un fumetto</a>
+                <a href="{{ route('comics.create') }}" class="btn btn-success">Crea un fumetto</a>
             </li>
         </ul>
 
