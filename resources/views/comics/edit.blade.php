@@ -5,16 +5,17 @@
 <div class="container my-3">
 
 
-    <h1 id="create-title">Crea un tuo fumetto</h1>
+    <h1 id="edit-title">Modifica: <span>{{$comic->title}}</span></h1>
 
-    <form action="{{route('comics.store')}}" method="POST">
+    <form action="{{route('comics.update', $comic)}}" method="POST">
         @csrf
+        @method('PUT')
+
 
         <div class="mb-3">
             <label for="title" class="form-label">Titolo</label>
-            <input type="text" class="form-control" id="title" name="title">
+            <input type="text" class="form-control" id="title" name="title" value="{{$comic->title}}">
         </div>
-
 
 
         <div class="mb-3">
@@ -24,30 +25,30 @@
 
 
 
-
         <div class="mb-3">
             <label for="thumb" class="form-label">Immagine</label>
-            <input type="text" class="form-control" id="thumb" name="thumb">
+            <input type="text" class="form-control" id="thumb" name="thumb" value="{{$comic->thumb}}">
         </div>
+
 
 
         <div class="mb-3">
             <label for="price" class="form-label">Prezzo</label>
-            <input type="text" class="form-control" id="price" name="price">
+            <input type="text" class="form-control" id="price" name="price" value="{{$comic->price}}">
         </div>
 
 
 
         <div class="mb-3">
             <label for="series" class="form-label">Serie</label>
-            <input type="text" class="form-control" id="series" name="series">
+            <input type="text" class="form-control" id="series" name="series" value="{{$comic->series}}">
         </div>
 
 
 
         <div class="mb-3">
             <label for="sale_date" class="form-label">Data</label>
-            <input type="text" class="form-control" id="sale_date" name="sale_date">
+            <input type="text" class="form-control" id="sale_date" name="sale_date" value="{{$comic->sale_date}}">
         </div>
 
 
@@ -59,8 +60,8 @@
         </div>
 
 
-        <button type="submit" class="btn btn-primary">Invia</button>
-        <button type="reset" class="btn btn-secondary">Annulla</button>
+        <button type="submit" class="btn btn-primary">Modifica</button>
+        <button type="reset" class="btn btn-warning">Annulla</button>
     </form>
 </div>
 

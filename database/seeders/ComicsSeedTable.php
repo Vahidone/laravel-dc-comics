@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Comic;
 
-class ComicsTableSeeder extends Seeder
+class ComicsSeedTable extends Seeder
 {
     /**
      * Run the database seeds.
@@ -29,8 +29,8 @@ class ComicsTableSeeder extends Seeder
             $new_comic->series = $comic['series'];
             $new_comic->sale_date = $comic['sale_date'];
             $new_comic->type = $comic['type'];
-
             $new_comic->save();
         }
     }
+
 }

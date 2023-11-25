@@ -1,8 +1,15 @@
 @extends('layouts.main')
 
-
 @section('content')
 
-<h1 class="my-5 py-5 text-white fw-bold text-center">HOME</h1>
+<div class="container mt-5 text-center">
+
+
+    <h1 id="home-title">MONDO FUMETTI</h1>
+
+    <p class="text-primary fs-3 ">Sono presenti <span class="text-danger fs-2 fw-bold">{{$num_products}}</span> fumetti nel nostro negozio online</p>
+
+    <p class="text-success fs-4 fw-bold mt-5">Dai un'occhiata alla lista dei fumetti disponibili :D</p>
+</div>
 
 @endsection

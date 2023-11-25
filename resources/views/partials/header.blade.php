@@ -1,20 +1,26 @@
 
 
 <header>
-    <ul class="nav">
 
-        <li class="nav-item">
-          <a class="nav-link" href="{{ route('home') }}">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ route('comics.index') }}">Comics list</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('comics.create') }}">New comic</a>
-          </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ route('about_us')}}">About us</a>
-        </li>
-    </ul>
+
+    <div class="container my-3">
+
+
+        <ul class="nav">
+            <li class="nav-item">
+                <a href="{{ route('home') }}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('comics.index') }}">Lista dei fumetti</a>
+
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('comics.create') }}">Crea un fumetto</a>
+            </li>
+        </ul>
+
+
+    </div>
+
 
 </header>

@@ -1,21 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Comic;
 
 use Illuminate\Http\Request;
-use App\Models\Comic;
 
 class PageController extends Controller
 {
     public function index() {
-        return view('home');
+        $num_products = Comic::count();
+        return view('home', compact('num_products'));
     }
-
-    public function about_us() {
-        return view('about_us');
-    }
-
-
-
-
 }
