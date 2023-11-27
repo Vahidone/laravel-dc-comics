@@ -7,6 +7,21 @@
 
     <h1 id="create-title">Crea un tuo fumetto</h1>
 
+    @if($errors->any())
+
+    <div class="alert alert-warning" role="alert">
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+
+        </ul>
+
+    </div>
+
+    @endif
+
+
     <form action="{{route('comics.store')}}" method="POST">
         @csrf
 
