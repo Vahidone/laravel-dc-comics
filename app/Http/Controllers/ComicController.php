@@ -39,10 +39,21 @@ class ComicController extends Controller
         $request->validate([
             'title' =>'required|min:2|max:50',
             'description' =>'required',
-            'thumb' =>'required',
-            'price' =>'required',
-          'series' =>'required',
+            'thumb' =>'required|min:3|max:255',
+            'price' =>'required|max:10',
+            'series' =>'required|min:2|max:50',
 
+        ], [
+            'title.required' => 'Il nome del fumetto è obbligatorio',
+            'title.min' => 'Il nome del fumetto deve avere almeno :min caratteri',
+            'title.max' => 'Il nome del fumetto può avere massimo :max caratteri',
+            'description.required' => 'La descrizione è obbligatoria',
+            'thumb.required' => 'L\'immagine è obbligatoria',
+            'price.required' => 'Il prezzo è obbligatorio',
+            'price.max' => 'Il prezzo deve essere massimo :max caratteri',
+            'series.required' => 'La serie è obbligatoria',
+            'series.min' => 'Il nome del fumetto deve avere almeno :min caratteri',
+            'series.max' => 'Il nome del fumetto può avere massimo :max caratteri',
         ]);
 
         $form_data = $request->all();
