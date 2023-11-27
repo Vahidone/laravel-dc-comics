@@ -5,10 +5,6 @@ body {
     background-color: rgb(238, 177, 238);
 }
 
-.hidden {
-    display: none;
-}
-
 
 #home-title {
     color: darkblue;
@@ -32,6 +28,10 @@ body {
         margin-bottom: 30px;
     }
 
+}
+
+.hide {
+    display: none;
 }
 
 

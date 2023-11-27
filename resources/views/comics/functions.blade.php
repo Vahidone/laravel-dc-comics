@@ -9,18 +9,14 @@
 
     function deleteMessageTimeout() {
         setTimeout(() => {
-
             deleteMessage = document.getElementById('delete-message');
 
-            if(deleteMessage) {
-
-                setTimeout(() => {
-                    deleteMessage.classList.add("hidden");
-                }, 2000)
+            if (deleteMessage) {
+            deleteMessage.classList.add("hide");
             }
-        }, 1000);
-
+        }, 3000);
     }
+
 
 
     deleteMessageTimeout();

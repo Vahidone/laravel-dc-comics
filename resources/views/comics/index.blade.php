@@ -10,7 +10,7 @@
 
     @if(Session('deleted'))
 
-        <div id="delete-message" class="alert alert-success" role="alert">
+        <div id="delete-message" class="alert alert-warning" role="alert">
             {{Session('deleted')}}
         </div>
 
