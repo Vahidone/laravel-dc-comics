@@ -42,6 +42,8 @@ class ComicController extends Controller
             'thumb' =>'required|min:3|max:255',
             'price' =>'required|max:10',
             'series' =>'required|min:2|max:50',
+            'type' =>'required|min:2|max:30',
+            'sale_date' =>'required|date',
 
         ], [
             'title.required' => 'Il nome del fumetto è obbligatorio',
@@ -54,6 +56,10 @@ class ComicController extends Controller
             'series.required' => 'La serie è obbligatoria',
             'series.min' => 'Il nome del fumetto deve avere almeno :min caratteri',
             'series.max' => 'Il nome del fumetto può avere massimo :max caratteri',
+            'type.required' => 'Il tipo di fumetto è obbligatorio',
+            'type.min' => 'Il tipo di fumetto deve avere almeno :min caratteri',
+            'type.max' => 'Il tipo di fumetto può avere massimo :max caratteri',
+            'sale_date.required' => 'La data è obbligatoria',
         ]);
 
         $form_data = $request->all();
