@@ -18,6 +18,5 @@
     }
 
 
-
     deleteMessageTimeout();
 </script>
