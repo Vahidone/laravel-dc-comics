@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ComicRequest;
 use Illuminate\Http\Request;
 use App\Models\Comic;
+
+
 
 class ComicController extends Controller
 {
@@ -34,33 +37,9 @@ class ComicController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ComicRequest $request)
     {
-        $request->validate([
-            'title' =>'required|min:2|max:50',
-            'description' =>'required',
-            'thumb' =>'required|min:3|max:255',
-            'price' =>'required|max:10',
-            'series' =>'required|min:2|max:50',
-            'type' =>'required|min:2|max:30',
-            'sale_date' =>'required|date',
 
-        ], [
-            'title.required' => 'Il nome del fumetto è obbligatorio',
-            'title.min' => 'Il nome del fumetto deve avere almeno :min caratteri',
-            'title.max' => 'Il nome del fumetto può avere massimo :max caratteri',
-            'description.required' => 'La descrizione è obbligatoria',
-            'thumb.required' => 'L\'immagine è obbligatoria',
-            'price.required' => 'Il prezzo è obbligatorio',
-            'price.max' => 'Il prezzo deve essere massimo :max caratteri',
-            'series.required' => 'La serie è obbligatoria',
-            'series.min' => 'Il nome del fumetto deve avere almeno :min caratteri',
-            'series.max' => 'Il nome del fumetto può avere massimo :max caratteri',
-            'type.required' => 'Il tipo di fumetto è obbligatorio',
-            'type.min' => 'Il tipo di fumetto deve avere almeno :min caratteri',
-            'type.max' => 'Il tipo di fumetto può avere massimo :max caratteri',
-            'sale_date.required' => 'La data è obbligatoria',
-        ]);
 
         $form_data = $request->all();
 
@@ -105,7 +84,7 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comic $comic)
+    public function update(ComicRequest $request, Comic $comic)
     {
         $form_data = $request->all();
 
